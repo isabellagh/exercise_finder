@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 
 class ExerciseInfo extends Component {
-    state = {
-        id: 'id',
-        name: '2 Handed Kettlebell Swing',
-        image_url: 'https://kettlebellsworkouts.com/wp-content/uploads/2018/08/60_double_handed_swing.png',
-        html_url: "https://kettlebellsworkouts.com/teaching-points-for-the-kettlebell-swing/"
-    }
 
     render() {
-        const { name, image_url, html_url } = this.state  // {destructuring and pulling stuff out of the object}
+        const { name, image_url, html_url } = this.props.exercise;  // {destructuring and pulling stuff out of the object}
 
         return (
             <div className="card text-center">
