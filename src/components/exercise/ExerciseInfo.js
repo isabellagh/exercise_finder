@@ -1,8 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const ExerciseInfo = (props) => {
 
-  const { name, image_url, html_url } = props.exercise;  // {destructuring and pulling stuff out of the object}
+const ExerciseInfo = ({ exercise: { name, image_url, html_url }}) => { //take exercise from props (destructure)
 
   return (
     <div className="card text-center">
@@ -13,6 +13,10 @@ const ExerciseInfo = (props) => {
       </div>
     </div>
   )
+}
+
+  ExerciseInfo.propTypes = {
+  exercise: PropTypes.object.isRequired
 }
 
 export default ExerciseInfo
